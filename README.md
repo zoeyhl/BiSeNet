@@ -5,22 +5,22 @@ My implementation of [BiSeNetV1](https://arxiv.org/abs/1808.00897) and [BiSeNetV
 
 The mIOU evaluation result of the models trained and evaluated on cityscapes train/val set is:
 | none | ss | ssc | msf | mscf | fps | link |
-|:---|---|---|---|---|---|
+|---|:---:|:---:|:---:|:---:|:---:|
 | bisenetv1 | 74.85 | 76.46 | 77.36 | 78.72 | - | [download](https://drive.google.com/file/d/1e1_E7OrpjTaD5Rael7Fus5lg-uGZ5TUZ/view?usp=sharing) |
 | bisenetv2 | 74.39 | 74.44 | 76.10 | 75.94 | - | [download](https://drive.google.com/file/d/1r_F-KZg-3s2pPcHRIuHZhZ0DQ0wocudk/view?usp=sharing) |
 
-Where *ss** means single scale evaluation, **ssc** means single scale crop evaluation, **msf** means multi-scale evaluation with flip augment, and **mscf** means multi-scale crop evaluation with flip evaluation. The eval scales of multi-scales evaluation are `[0.5, 0.75, 1.0, 1.25, 1.5, 1.75]`, and the crop size of crop evaluation is `[1024, 1024]`.
+> Where **ss** means single scale evaluation, **ssc** means single scale crop evaluation, **msf** means multi-scale evaluation with flip augment, and **mscf** means multi-scale crop evaluation with flip evaluation. The eval scales of multi-scales evaluation are `[0.5, 0.75, 1.0, 1.25, 1.5, 1.75]`, and the crop size of crop evaluation is `[1024, 1024]`.
 
 Note that the model has a big variance, which means that the results of training for many times would vary within a relatively big margin. 
 
 
 ## platform
 My platform is like this: 
-    * ubuntu 16.04
-    * cuda 10.1.243
-    * cudnn 7
-    * miniconda python 3.6.9
-    * pytorch 1.6.0
+* ubuntu 16.04
+* cuda 10.1.243
+* cudnn 7
+* miniconda python 3.6.9
+* pytorch 1.6.0
 
 
 ## get start
@@ -33,6 +33,7 @@ This would run inference on the image and save the result image to `./res.jpg`.
 
 ## prepare dataset
 1. cityscapes  
+
 Register and download the dataset from the official [website](https://www.cityscapes-dataset.com/). Then decompress them into the `datasets/cityscapes` directory:  
 ```
     $ mv /path/to/leftImg8bit_trainvaltest.zip datasets/cityscapes
@@ -43,6 +44,7 @@ Register and download the dataset from the official [website](https://www.citysc
 ```
 
 2. custom dataset  
+
 If you want to train on your own dataset, you should generate annotation files first with the format like this: 
 ```
 munster_000002_000019_leftImg8bit.png,munster_000002_000019_gtFine_labelIds.png
