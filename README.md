@@ -5,7 +5,7 @@ My implementation of [BiSeNetV1](https://arxiv.org/abs/1808.00897) and [BiSeNetV
 
 The mIOU evaluation result of the models trained and evaluated on cityscapes train/val set is:
 | none | ss | ssc | msf | mscf | fps | link |
-|---|:---:|:---:|:---:|:---:|:---:|
+|------|:--:|:---:|:---:|:----:|:---:|:----:|
 | bisenetv1 | 74.85 | 76.46 | 77.36 | 78.72 | - | [download](https://drive.google.com/file/d/1e1_E7OrpjTaD5Rael7Fus5lg-uGZ5TUZ/view?usp=sharing) |
 | bisenetv2 | 74.39 | 74.44 | 76.10 | 75.94 | - | [download](https://drive.google.com/file/d/1r_F-KZg-3s2pPcHRIuHZhZ0DQ0wocudk/view?usp=sharing) |
 
@@ -32,6 +32,7 @@ This would run inference on the image and save the result image to `./res.jpg`.
 
 
 ## prepare dataset
+
 1. cityscapes  
 
 Register and download the dataset from the official [website](https://www.cityscapes-dataset.com/). Then decompress them into the `datasets/cityscapes` directory:  
