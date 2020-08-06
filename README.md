@@ -33,7 +33,7 @@ This would run inference on the image and save the result image to `./res.jpg`.
 
 ## prepare dataset
 
-1. cityscapes  
+1.cityscapes  
 
 Register and download the dataset from the official [website](https://www.cityscapes-dataset.com/). Then decompress them into the `datasets/cityscapes` directory:  
 ```
@@ -44,7 +44,7 @@ Register and download the dataset from the official [website](https://www.citysc
     $ unzip gtFine_trainvaltest.zip
 ```
 
-2. custom dataset  
+2.custom dataset  
 
 If you want to train on your own dataset, you should generate annotation files first with the format like this: 
 ```
