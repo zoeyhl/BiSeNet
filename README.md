@@ -1,5 +1,6 @@
 # BiSeNetV1 & BiSeNetV2
 
+* Forked from https://github.com/CoinCheung/BiSeNet 
 My implementation of [BiSeNetV1](https://arxiv.org/abs/1808.00897) and [BiSeNetV2](https://arxiv.org/abs/1808.00897).
 
 
@@ -57,6 +58,8 @@ frankfurt_000001_079206_leftImg8bit.png,frankfurt_000001_079206_gtFine_labelIds.
 ```
 Each line is a pair of training sample and ground truth image path, which are separated by a single comma `,`.   
 Then you need to change the field of `im_root` and `train/val_im_anns` in the configuration files.
+
+* Edit: Put dataset_forest/training and dataset_forest/testing under the folder datasets/dataset_forest. I added prepare.py in datasets/dataset_forest so that it will automatically generate train.txt and val.txt.
 
 ## train
 In order to train the model, you can run command like this: 
