@@ -36,7 +36,7 @@ class CamVid(Dataset):
 		# Images extension
 		img_extension = '.png'
 
-		with open('./camvid_info.json', 'r') as fr:
+		with open('./Pilot-ontology.json', 'r') as fr:
 			labels_info = json.load(fr)
 		self.lb_map = {el['id']: el['trainId'] for el in labels_info}
 
