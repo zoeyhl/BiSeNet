@@ -12,7 +12,7 @@ from PIL import Image
 import numpy as np
 import json
 
-from transform import *
+#from transforms import *
 
 
 
@@ -117,7 +117,7 @@ class CamVid(Dataset):
 
 if __name__ == "__main__":
 	from tqdm import tqdm
-	ds = CamVid('./CamVid/', n_classes=11, mode='val')
+	ds = CamVid('./CamVid/', n_classes=21, mode='val')
 	uni = []
 	for im, lb in tqdm(ds):
 		lb_uni = np.unique(lb).tolist()
